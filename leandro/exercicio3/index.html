@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stylle.css">
+    <title>Exercicio 3</title>
+
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+   color: black;
+    text-decoration: none;/*Remove o sublinhado do menu*/
+    font-weight: bold;/*coloca fonte em negrito*/
+}
+
+nav ul{
+    display: flex;/*Altera a coluna da linha */
+    list-style: none;/* Remover os marcadores */
+    justify-content: center;/* centraliza os itens do menu*/
+   }
+
+   li{
+    margin: 15px;
+}
+
+body{
+    background-color: aqua;
+}
+
+h1, p {
+    color: red;
+}
+
+a:hover{
+    color: red;/*coloca efeito no menu*/
+}
+
+
+
+a::after{
+    content:"";
+    height: 2px;
+    width: 0;
+    display: block;
+    background-color: none;
+    left: 50%; /* Inicia no meio */
+    transition: width 0.2s ease, background-color 0.2s ease;
+    transform: scaleX(0); /* Começa do meio, invisível */
+    transform-origin: center; /* Define o centro como origem da transformação */
+   
+}
+
+a:hover::after{
+    background-color: red;
+    display: block;
+    width: 100%;
+    transition: transform 0.2s;
+    transform: scaleX(1); /* Expande para as laterais */
+}
+
+#pagina-inicial{
+    background-color: darkgrey;
+    height: 800px;
+}
+
+#sobre{
+    background-color: gold;
+    height: 800px;
+}
+
+#contato{
+    background-color: blue;
+    height: 800px;
+}
+
+    </style>
+</head>
+
+<body>
+    <div>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#pagina-inicial">Home</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <section id="pagina-inicial">
+        <div >
+            <h2>Bem-vindo a minha Página Inicial</h2>
+            <p>Esta e a seçâo pagina inicial</p>
+        </div>
+    </section>
+
+    <section id="sobre">
+        <div>
+            <h2>Sobre mim</h2>
+            <p>Esta e a seçâo Sobre</p>
+        </div>
+    </section>
+
+    <section id="contato">
+        <div>
+            <h2>Contato</h2>
+            <p>Esta e a seçâo Contato</p>
+        </div>
+    </section>
+</body>
+
+</html>

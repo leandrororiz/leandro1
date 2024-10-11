@@ -1,0 +1,64 @@
+*{
+    margin: 0;/* Remove as margens padrôes */
+    padding: 0;/* Remove os preenchimentos padrôes */
+}
+
+header{
+    background-color: red;
+    padding: 10px;
+}
+
+a{
+    color: white;
+    text-decoration: none;/*Remove o sublinhado do menu*/
+    font-weight: bold;/*coloca fonte em negrito*/
+}
+
+nav ul{
+ display: flex;/*Altera a coluna da linha */
+ list-style: none;/* Remover os marcadores */
+ justify-content: center;/* centraliza os itens do menu*/
+}
+
+li{
+    margin: 15px;
+}
+
+body{
+    background-color:black;
+}
+
+h1, p {
+    color: red;
+}
+
+a:hover{
+    color: black;/*coloca efeito no menu*/
+}
+
+.underline {
+    position: relative;
+    text-decoration: none; /* Remove o sublinhado padrão */
+}
+
+a::after{
+    content:"";
+    height: 2px;
+    width: 0;
+    display: block;
+    background-color: none;
+    left: 50%; /* Inicia no meio */
+    transition: width 0.2s ease, background-color 0.2s ease;
+    transform: scaleX(0); /* Começa do meio, invisível */
+    transform-origin: center; /* Define o centro como origem da transformação */
+   
+}
+
+a:hover::after{
+    background-color: black;
+    display: block;
+    width: 100%;
+    transition: transform 0.2s;
+    transform: scaleX(1); /* Expande para as laterais */
+   
+}
